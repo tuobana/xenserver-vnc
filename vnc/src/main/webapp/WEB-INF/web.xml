@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+  <display-name>VNC</display-name>
+  
+    <!-- Basic config -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Servlet -->
+    <servlet>
+        <description>vnc servlet</description>
+        <servlet-name>VNCSERVICE</servlet-name>
+        <servlet-class>
+            com.vnc.service.VncServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VNCSERVICE</servlet-name>
+        <url-pattern>/vnc</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <description>vm servlet</description>
+        <servlet-name>vmservlet</servlet-name>
+        <servlet-class>
+            com.vnc.service.VmServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>vmservlet</servlet-name>
+        <url-pattern>/vnc/vmation</url-pattern>
+    </servlet-mapping>
+        
+</web-app>
